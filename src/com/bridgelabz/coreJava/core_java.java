@@ -4,14 +4,19 @@ import java.util.Scanner;
 
 public class core_java {
     public static void main(String[] args) {
-        int year;
-        System.out.println("Enter an Year :: ");
         Scanner sc = new Scanner(System.in);
-        year = sc.nextInt();
+        System.out.println("Enter the N:");
+        int powerOfTwo = sc.nextInt();
 
-        if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0))
-            System.out.println("Specified year is a leap year");
-        else
-            System.out.println("Specified year is not a leap year");
+        if (powerOfTwo <= 0 || powerOfTwo < 31) {
+            System.out.println("Power of 2's: ");
+
+            for (int i = 0; i <= powerOfTwo; i++) {
+                int powerOfValue = ((int) Math.pow(2, i));      //2^i
+                System.out.println("The value of 2^" + i + " is: " + powerOfValue);
+            }
+        } else
+            System.out.println("Value overflows int value");
+
     }
 }

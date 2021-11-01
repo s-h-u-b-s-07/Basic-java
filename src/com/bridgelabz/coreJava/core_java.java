@@ -5,18 +5,19 @@ import java.util.Scanner;
 public class core_java {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the N:");
-        int powerOfTwo = sc.nextInt();
+        System.out.println("Enter the first number:");
+        int firstNumber = sc.nextInt();
+        System.out.println("Enter the second number:");
+        int secondNumber= sc.nextInt();
+        System.out.println("Numbers before swap are:"+firstNumber+ " and " +secondNumber);
 
-        if (powerOfTwo <= 0 || powerOfTwo < 31) {
-            System.out.println("Power of 2's: ");
+        int tempNumber;
+        tempNumber=firstNumber;
+        firstNumber=secondNumber;
+        secondNumber=tempNumber;
 
-            for (int i = 0; i <= powerOfTwo; i++) {
-                int powerOfValue = ((int) Math.pow(2, i));      //2^i
-                System.out.println("The value of 2^" + i + " is: " + powerOfValue);
-            }
-        } else
-            System.out.println("Value overflows int value");
+        System.out.println("Numbers after swap are:"+firstNumber+ " and " +secondNumber);
+
 
     }
 }

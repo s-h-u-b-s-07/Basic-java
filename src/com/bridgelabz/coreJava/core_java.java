@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class core_java {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the character to be check:");
-        char chToCheck=sc.next().charAt(0);
-        if(chToCheck =='a' || chToCheck =='e' || chToCheck =='i' || chToCheck =='o' || chToCheck =='u'|| chToCheck =='A' || chToCheck =='E' || chToCheck =='I' || chToCheck =='O' || chToCheck =='U')
-            System.out.println("The entered character is a vowel");
+        System.out.println("Enter the number:");
+        int numberToCheck= sc.nextInt();
+
+        if(numberToCheck % 2 == 0)
+            System.out.println("The entered number is even");
         else
-            System.out.println("The entered character is  a Consonant");
+            System.out.println("The Entered number is odd");
 
 
 

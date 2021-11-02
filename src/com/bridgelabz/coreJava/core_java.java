@@ -4,18 +4,14 @@ import java.util.Scanner;
 
 public class core_java {
     public static void main(String[] args) {
-        int dividend, divisor, quotient, remainder;
-
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the  dividend");
-        dividend= sc.nextInt();
-        System.out.println("Enter the divisor");
-        divisor= sc.nextInt();
+        System.out.println("Enter the character to be check:");
+        char chToCheck=sc.next().charAt(0);
+        if(chToCheck =='a' || chToCheck =='e' || chToCheck =='i' || chToCheck =='o' || chToCheck =='u'|| chToCheck =='A' || chToCheck =='E' || chToCheck =='I' || chToCheck =='O' || chToCheck =='U')
+            System.out.println("The entered character is a vowel");
+        else
+            System.out.println("The entered character is  a Consonant");
 
-        quotient = dividend / divisor;
-        remainder = dividend % divisor;
-        System.out.println("Quotient: " + quotient);
-        System.out.println("Remainder: " + remainder);
 
 
     }
